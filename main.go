@@ -6,7 +6,7 @@ import (
 )
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, World second time!")
+	fmt.Fprintf(w, "Hello, World !")
 }
 
 func main() {
@@ -17,5 +17,3 @@ func main() {
 		fmt.Println("Error starting server:", err)
 	}
 }
-
-//a
