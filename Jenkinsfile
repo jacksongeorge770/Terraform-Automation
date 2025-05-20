@@ -13,12 +13,6 @@ pipeline {
                 git url: 'https://github.com/jacksongeorge770/Terraform-Automation.git', branch: 'main', credentialsId: 'GIT-LOGIN'
             }
         }
-        stage('Build GoLang') {
-            steps {
-                sh 'go mod download'
-                sh 'go build -o webserver ./main.go'
-            }
-        }
         stage('Build Docker') {
             steps {
                 sh "docker build -t ${IMAGE_NAME}:${IMAGE_TAG} ."
